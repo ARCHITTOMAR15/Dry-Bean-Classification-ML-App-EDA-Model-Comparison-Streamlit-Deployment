@@ -221,6 +221,26 @@ st.sidebar.markdown('<div class="metric-tile" style="background: linear-gradient
 st.sidebar.markdown('<div class="metric-tile" style="background: linear-gradient(135deg,#845ef7,#b197fc);">Weighted Avg F1 Score<br>0.92</div>', unsafe_allow_html=True)
 
 # =========================
+# DATA POINT TILES
+# =========================
+st.sidebar.markdown("### 📊 Data Points")
+
+for feature in model_features:
+    # 👉 Use live values if available, else default mean
+    val = input_data.get(feature, feature_means[feature]) if 'input_data' in locals() else feature_means[feature]
+
+    st.sidebar.markdown(f"""
+    <div class="metric-tile" style="
+        background: linear-gradient(135deg,#00b4d8,#48cae4);
+        font-size:14px;">
+        {feature}<br>{round(val, 2)}
+    </div>
+    """, unsafe_allow_html=True)
+
+
+
+
+# =========================
 # TITLE
 # =========================
 st.markdown('<div class="main-title">🌱 Dry Bean Classification</div>', unsafe_allow_html=True)
