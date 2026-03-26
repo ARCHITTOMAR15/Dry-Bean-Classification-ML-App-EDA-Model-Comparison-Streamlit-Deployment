@@ -18,7 +18,7 @@ It includes complete data analysis, preprocessing, model building, and deploymen
 ## 🚀 Live App
 
 👉 **Streamlit App:**
-🔗 *[Add your Streamlit link here]*
+🔗 *[https://dry-bean-classification-ml-app-eda-model-comparison-app-deploy.streamlit.app/]*
 
 ---
 
